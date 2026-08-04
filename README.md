@@ -18,13 +18,14 @@ Framework `Other`, Build e Output vazios, sem mexer em Root Directory.
 
 ## O que já está pronto
 
-- Hero com mandala girando, aura animada e foto do Ray
+- Hero com mandala girando, aura animada, foto do Ray e badge de nota do Google
 - Selos de autoridade (Instagram, nota do Google, atendimento 24h)
 - 4 cards de atendimento com foto de fundo e CTA de WhatsApp
 - “Como funciona” em 3 etapas
 - 6 cards de cursos e produtos
 - Sobre o Ray + as 4 camadas do trabalho
 - Depoimentos + avaliações reais do Google
+- FAQ em acordeão (`<details name="faq">`, um aberto por vez)
 - CTA final, rodapé e botão flutuante de WhatsApp
 - Open Graph para preview bonito no WhatsApp/Instagram
 - Responsivo mobile-first (no celular os cards viram pilha de tela cheia,
@@ -53,6 +54,11 @@ Depois, no `index.html`, descomente os dois blocos marcados com
 - [ ] Trocar `og:url` no `<head>` pelo domínio final (hoje aponta para
       `https://ray-arend.vercel.app/`)
 - [ ] Adicionar os 3 prints que faltam (acima)
+- [ ] Confirmar com o Ray o **total de avaliações no Google**. O badge do hero
+      hoje mostra só `★★★★★ 5,0 · avaliações no Google`, sem número — tem um
+      comentário no `index.html` mostrando onde entra a contagem.
+- [ ] Se o Ray tiver o link do perfil do Google, vale transformar o badge num
+      `<a>` apontando pra lá
 
 ## Rodar localmente
 

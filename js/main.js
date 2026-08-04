@@ -54,4 +54,21 @@
   document.addEventListener('pointermove', onMove, { passive: true });
   document.addEventListener('pointerleave', resetTilt);
   mqMobile.addEventListener('change', resetTilt);
+
+  /* ---------- FAQ: só um aberto por vez ----------
+     Navegador novo já faz isso sozinho com <details name="faq">.
+     Este fallback cobre os que ainda não suportam o atributo. */
+  var supportsName = 'name' in document.createElement('details');
+
+  if (!supportsName) {
+    var faq = document.querySelectorAll('.faq-item');
+    faq.forEach(function (item) {
+      item.addEventListener('toggle', function () {
+        if (!item.open) return;
+        faq.forEach(function (other) {
+          if (other !== item) other.open = false;
+        });
+      });
+    });
+  }
 })();
