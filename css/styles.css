@@ -703,7 +703,9 @@ a:hover { color: var(--color-accent-200); }
   color: var(--color-neutral-100);
   text-wrap: balance;
 }
-.final p {
+/* Escopo no .final-inner: se ficar em `.final p` esta regra também pega o
+   aviso legal e quebra o alinhamento dele com o resto do rodapé. */
+.final-inner p {
   margin: 0;
   max-width: 44ch;
   font-size: clamp(16px, 2.6vw, 19px);
