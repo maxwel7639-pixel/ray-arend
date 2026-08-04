@@ -557,6 +557,14 @@ a:hover { color: var(--color-accent-200); }
   text-transform: uppercase;
   color: var(--color-accent-400);
 }
+
+.curso-desc {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-neutral-400);
+  text-wrap: pretty;
+}
 .curso-price {
   display: flex;
   flex-wrap: wrap;
@@ -861,18 +869,22 @@ a:hover { color: var(--color-accent-200); }
   .card-grid-atend,
   .card-grid-curso { display: block; }
 
+  /* Atendimentos: a pilha sticky de tela cheia do design. Funciona porque o
+     card é uma foto sangrada, então não sobra vazio. */
   .card-grid-atend .card-slot {
     position: sticky;
     top: 0;
     height: 100svh;
     padding-bottom: 10px;
   }
+
+  /* Cursos: aqui a altura fixa de 88svh deixava um buraco grande entre o
+     texto e o preço, porque o conteúdo é curto. A altura segue o conteúdo. */
   .card-grid-curso .card-slot {
-    position: sticky;
-    top: 6vh;
-    height: 88svh;
-    padding-bottom: 10px;
+    height: auto;
+    padding-bottom: 14px;
   }
+  .card-grid-curso .curso-price { margin-top: 14px; }
 
   .wa-float { padding: 0; width: 60px; justify-content: center; }
   .wa-float .wa-label { display: none; }

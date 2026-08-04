@@ -11,7 +11,19 @@ css/styles.css      tokens do design system Nocturne + componentes
 js/main.js          reveal ao rolar + tilt nos cards
 img/                fotos dos slots (hero, sobre, atendimentos, cursos)
 img/avaliacoes/     prints das avaliações do Google
+img/og-cover.jpg    capa do link (preview no WhatsApp/Instagram)
 ```
+
+### Regerar a capa do link
+
+`img/og-cover.jpg` é uma captura da seção hero em 2400×1260 (proporção 1,91:1).
+Se o hero mudar, dá pra regerar rodando o site local e tirando um screenshot do
+hero nessa proporção — o importante é manter o arquivo abaixo de ~300 KB e a
+URL da `og:image` absoluta.
+
+> O WhatsApp guarda o preview em cache por link. Depois de trocar a capa, o
+> preview antigo pode continuar aparecendo — mandar o link com `?v=2` no fim
+> força ele a buscar de novo.
 
 Os arquivos ficam na **raiz do repositório** — na Vercel é só importar com
 Framework `Other`, Build e Output vazios, sem mexer em Root Directory.
@@ -51,8 +63,13 @@ Depois, no `index.html`, descomente os dois blocos marcados com
 
 ## Antes de publicar
 
-- [ ] Trocar `og:url` no `<head>` pelo domínio final (hoje aponta para
-      `https://ray-arend.vercel.app/`)
+- [ ] **Trocar 3 descrições provisórias de curso.** Códigos de LUZ Arcturianos,
+      Cura Arcturiana e Último Despertar estão com um texto genérico, porque a
+      arte desses produtos não descreve o conteúdo. Estão marcados com
+      `TEXTO PROVISÓRIO` no `index.html` — é pedir 1 ou 2 linhas pro Ray.
+- [ ] Trocar `og:url` **e** `og:image`/`twitter:image` no `<head>` pelo domínio
+      final (hoje apontam para `https://ray-arend.vercel.app/`). A `og:image`
+      precisa ser URL absoluta, senão o WhatsApp não carrega a capa.
 - [ ] Adicionar os 3 prints que faltam (acima)
 - [ ] Se o Ray tiver o link do perfil do Google, vale transformar o badge do
       hero num `<a>` apontando pra lá
