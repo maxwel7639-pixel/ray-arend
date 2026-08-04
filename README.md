@@ -54,11 +54,12 @@ Depois, no `index.html`, descomente os dois blocos marcados com
 - [ ] Trocar `og:url` no `<head>` pelo domínio final (hoje aponta para
       `https://ray-arend.vercel.app/`)
 - [ ] Adicionar os 3 prints que faltam (acima)
-- [ ] Confirmar com o Ray o **total de avaliações no Google**. O badge do hero
-      hoje mostra só `★★★★★ 5,0 · avaliações no Google`, sem número — tem um
-      comentário no `index.html` mostrando onde entra a contagem.
-- [ ] Se o Ray tiver o link do perfil do Google, vale transformar o badge num
-      `<a>` apontando pra lá
+- [ ] Se o Ray tiver o link do perfil do Google, vale transformar o badge do
+      hero num `<a>` apontando pra lá
+
+A nota do Google (`5,0 · 60 avaliações`) já está no ar em três lugares: o badge
+do hero, o selo de autoridade e o cabeçalho da seção de avaliações. Se o número
+mudar, é procurar por `60 avaliações` no `index.html`.
 
 ## Rodar localmente
 
